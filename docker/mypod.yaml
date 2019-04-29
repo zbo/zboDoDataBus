@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: combined
+spec:
+  replicas: 1
+  selector:
+    app: combined
+  template:
+    metadata:
+      name: combined
+      labels:
+        app: combined
+    spec:
+      containers:
+      - name: jupyter
+        image: myjupyter
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8888
+        volumeMounts:
+        - name: bob
+          mountPath: /bob/
+      volumes:
+        - name: bob
+          hostPath:
+           path: /Users/zhu/bob/zboDoStock/docker/myJupyter/volumn
+

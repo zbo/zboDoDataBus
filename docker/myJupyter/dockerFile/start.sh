@@ -1,0 +1,1 @@
+jupyter notebook --ip 0.0.0.0 --allow-root >/bob/log.txt 2>&1
