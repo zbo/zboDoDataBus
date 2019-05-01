@@ -16,7 +16,13 @@ def get_sh_data_detail(code, fre):
     print data.ix[1]['open']
 
 
+def get_sh_now(code):
+    data = jq.get_current_tick(security=code)
+    print data
+
+
 if __name__ == '__main__':
     login()
-    get_sh_data('000001.XSHG','2019-04-25', '2019-04-29', '1m')
-    get_sh_data_detail('000001.XSHG','1m')
+    # get_sh_data('000001.XSHG','2019-04-25', '2019-04-29', '1m')
+    # get_sh_data_detail('000001.XSHG','1m')
+    get_sh_now('000001.XSHG')

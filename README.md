@@ -8,3 +8,6 @@
 #### 前端展示
     https://github.com/pyecharts/pyecharts/
     https://blog.csdn.net/qtlyx/article/details/85221503
+
+#### Jupyter调用pyecharts
+    
